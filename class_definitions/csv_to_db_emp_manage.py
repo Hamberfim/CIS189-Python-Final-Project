@@ -29,7 +29,7 @@ db_file_name = "employee.db"
 
 # check if database exist in the working directory
 db_is_new = not os.path.exists(db_file_name)
-
+# check if db exists, if not create it from the csv file
 if db_is_new:
     # csv-to-sqlite --help
     # SQLite type and encoding options
