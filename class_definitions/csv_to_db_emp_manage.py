@@ -6,13 +6,14 @@ Program: csv_to_db_emp_manage.py
 
 This program imports a csv file and creates a SQLite3 database
 and then the database is managed through a tkinter GUI.
-TODO:
+
     Test if database already exists, if not:
         Run Script for Data Exchange:
             * Read the CSV file,
             * create a SQLite3 database with table,
             * use first row headers for column names,
             * populate the table with the data.
+TODO:
         else:
             * make db connection
             * provide CRUD functionality
