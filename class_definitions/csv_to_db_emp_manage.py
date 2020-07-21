@@ -33,8 +33,8 @@ db_is_new = not os.path.exists(db_file_name)
 # check if db exists, if not create it from the csv file
 if db_is_new:
     # csv-to-sqlite --help
-    # SQLite type and encoding options
-    opt = csv_to_sqlite.CsvOptions(typing_style="full", encoding="UTF-8")
+    # SQLite type and encoding options must match cvs file
+    opt = csv_to_sqlite.CsvOptions(typing_style="full", encoding="utf8")
     # a list of CSV files separated by commas
     input_files = ["employees.csv"]
     # write the database
@@ -61,7 +61,7 @@ def create_employee(conn, employee):
     :param employee:
     :return: employee id
     """
-    sql = ''' INSERT INTO employees(﻿EmployeeName, JobTitle, TotalPay)
+    sql = ''' INSERT INTO employees(EmployeeName, JobTitle, TotalPay)
               VALUES(?,?,?) '''
     cur = conn.cursor()  # cursor object
     cur.execute(sql, employee)
@@ -75,10 +75,23 @@ def select_all_employees(conn):
     :return: all rows of employee table
     """
     cur = conn.cursor()
-    cur.execute("SELECT oid, * FROM employees")
+    cur.execute('''SELECT oid, * FROM employees''')
     rows = cur.fetchall()
     # return the rows
     return rows
+
+
+def update_employee_name(conn, employee):
+    """Update Employee name
+    :param conn:
+    :param employee:
+    :return: employee id
+    """
+    sql = ''' UPDATE employees
+              SET EmployeeName = ? 
+              WHERE oid = ?'''
+    cur = conn.cursor()
+    cur.execute(sql, employee)
 
 
 def update_employee_pay(conn, employee):
@@ -113,24 +126,39 @@ def delete_employee(conn, oid):
     :param id: id of the employee
     :return:
     """
-    sql = 'DELETE FROM employees WHERE oid=?'
+    sql = '''DELETE FROM employees WHERE oid=?;'''
     cur = conn.cursor()
     cur.execute(sql, (oid,))
+
+
+def column_names(conn):
+    """
+    Internal Testing - use to get table column names
+    equivalent to INFORMATION_SCHEMA.COLUMNS
+    """
+    cur = conn.cursor()
+    cur.execute('''SELECT name, sql FROM sqlite_master WHERE type='table' ORDER BY name;''')
+    rows = cur.fetchall()
+    # return the rows
+    return rows
 
 
 if __name__ == '__main__':
     # TODO: remove after testing
     """
+    # get all records
     results = select_all_employees(sqlite3.connect(db_file_name))
     for row in results:
         print(row)
-    
+
+    # create a new record
     conn = create_connection(db_file_name)
     with conn:
         # EmployeeName, JobTitle, TotalPay
-        employee = ('William Rouge', 'Editor', '32000.00')
+        employee = ('William Rouge', 'Editor', '30000.00')
         emp_editor = create_employee(conn, employee)
-
+    
+    # update pay
     conn = create_connection(db_file_name)
     with conn:
         # TotalPay, oid
@@ -141,9 +169,10 @@ if __name__ == '__main__':
         for row in rows:
             print(row)
 
+    # update job title
     conn = create_connection(db_file_name)
     with conn:
-        # TotalPay, oid
+        # JobTitle, oid
         employee = ('Chief Editor', 101)
         update_employee_title(conn, employee)
 
@@ -151,9 +180,25 @@ if __name__ == '__main__':
         for row in rows:
             print(row)
 
+    # delete record
     conn = create_connection(db_file_name)
     with conn:
         delete_employee(conn, 101)
         rows = select_all_employees(conn)
         for row in rows:
-            print(row)"""
+            print(row)
+    
+    # update name
+    conn = create_connection(db_file_name)
+    with conn:
+        # EmployeeName, oid
+        employee = ('Bill', 101)
+        update_employee_name(conn, employee)
+
+        rows = select_all_employees(conn)
+        for row in rows:
+            print(row)
+    # get the column names, equivalent to INFORMATION_SCHEMA.COLUMNS
+    col_names = column_names(sqlite3.connect(db_file_name))
+    for col in col_names:
+        print(col)"""
