@@ -42,3 +42,35 @@ if db_is_new:
 else:
     # console output
     print(db_file_name, "database already exists.")
+
+
+def create_connection(db_file_name):
+    """ Connect to a SQLite database
+    :param db: filename of database
+    :return connection if no error, otherwise None"""
+    try:
+        conn = sqlite3.connect(db_file_name)
+        return conn
+    except Error as err:
+        print(err)
+
+
+def select_all_rows(conn):
+    """Query all rows of employee table
+    :param conn: the connection object
+    :return: all rows of employee table
+    """
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM employees")
+
+    rows = cur.fetchall()
+
+    # return the rows
+    return rows
+
+
+if __name__ == '__main__':
+    # TODO: remove after testing
+    results = select_all_rows(sqlite3.connect(db_file_name))
+    for row in results:
+        print(row)
