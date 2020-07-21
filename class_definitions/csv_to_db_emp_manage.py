@@ -107,6 +107,17 @@ def update_employee_title(conn, employee):
     cur.execute(sql, employee)
 
 
+def delete_employee(conn, oid):
+    """Delete a employee by employee id
+    :param conn: database connection
+    :param id: id of the employee
+    :return:
+    """
+    sql = 'DELETE FROM employees WHERE oid=?'
+    cur = conn.cursor()
+    cur.execute(sql, (id,))
+
+
 if __name__ == '__main__':
     # TODO: remove after testing
     """
@@ -128,7 +139,7 @@ if __name__ == '__main__':
 
         rows = select_all_employees(conn)
         for row in rows:
-            print(row)"""
+            print(row)
 
     conn = create_connection(db_file_name)
     with conn:
@@ -136,6 +147,13 @@ if __name__ == '__main__':
         employee = ('Chief Editor', 101)
         update_employee_title(conn, employee)
 
+        rows = select_all_employees(conn)
+        for row in rows:
+            print(row)"""
+
+    conn = create_connection(db_file_name)
+    with conn:
+        delete_employee(conn, 101)
         rows = select_all_employees(conn)
         for row in rows:
             print(row)
