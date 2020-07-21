@@ -202,3 +202,4 @@ if __name__ == '__main__':
     col_names = column_names(sqlite3.connect(db_file_name))
     for col in col_names:
         print(col)"""
+    pass
