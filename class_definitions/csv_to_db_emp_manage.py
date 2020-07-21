@@ -20,7 +20,7 @@ TODO:
     Build GUI on top with CRUD functionality
 """
 import os
-import csv
+# import csv
 import sqlite3
 from sqlite3 import Error
 from class_definitions import csv_to_sqlite
