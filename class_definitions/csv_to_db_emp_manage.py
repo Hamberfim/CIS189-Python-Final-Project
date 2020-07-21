@@ -13,9 +13,9 @@ and then the database is managed through a tkinter GUI.
             * create a SQLite3 database with table,
             * use first row headers for column names,
             * populate the table with the data.
-TODO:
         else:
             * make db connection
+TODO:
             * provide CRUD functionality
     Build GUI on top with CRUD functionality
 """
@@ -69,24 +69,48 @@ def create_employee(conn, employee):
     return cur.lastrowid
 
 
-def select_all_rows(conn):
+def select_all_employees(conn):
     """Query all rows of employee table
     :param conn: the connection object
     :return: all rows of employee table
     """
     cur = conn.cursor()
     cur.execute("SELECT oid, * FROM employees")
-
     rows = cur.fetchall()
-
     # return the rows
     return rows
+
+
+def update_employee_pay(conn, employee):
+    """Update Employee TotalPay
+    :param conn:
+    :param employee:
+    :return: employee id
+    """
+    sql = ''' UPDATE employees
+              SET TotalPay = ? 
+              WHERE oid = ?'''
+    cur = conn.cursor()
+    cur.execute(sql, employee)
+
+
+def update_employee_title(conn, employee):
+    """Update employee JobTitle
+    :param conn:
+    :param employee:
+    :return: employee id
+    """
+    sql = ''' UPDATE employees
+              SET JobTitle = ? 
+              WHERE oid = ?'''
+    cur = conn.cursor()
+    cur.execute(sql, employee)
 
 
 if __name__ == '__main__':
     # TODO: remove after testing
     """
-    results = select_all_rows(sqlite3.connect(db_file_name))
+    results = select_all_employees(sqlite3.connect(db_file_name))
     for row in results:
         print(row)
     
@@ -94,4 +118,24 @@ if __name__ == '__main__':
     with conn:
         # EmployeeName, JobTitle, TotalPay
         employee = ('William Rouge', 'Editor', '32000.00')
-        emp_editor = create_employee(conn, employee)"""
+        emp_editor = create_employee(conn, employee)
+
+    conn = create_connection(db_file_name)
+    with conn:
+        # TotalPay, oid
+        employee = (36000.00, 101)
+        update_employee_pay(conn, employee)
+
+        rows = select_all_employees(conn)
+        for row in rows:
+            print(row)"""
+
+    conn = create_connection(db_file_name)
+    with conn:
+        # TotalPay, oid
+        employee = ('Chief Editor', 101)
+        update_employee_title(conn, employee)
+
+        rows = select_all_employees(conn)
+        for row in rows:
+            print(row)
