@@ -34,7 +34,7 @@ db_is_new = not os.path.exists(db_file_name)
 if db_is_new:
     # csv-to-sqlite --help
     # SQLite type and encoding options
-    opt = csv_to_sqlite.CsvOptions(typing_style="full", encoding="windows-1250")
+    opt = csv_to_sqlite.CsvOptions(typing_style="quick", encoding="windows-1250")
     # a list of CSV files separated by commas
     input_files = ["employees.csv"]
     # write the database
