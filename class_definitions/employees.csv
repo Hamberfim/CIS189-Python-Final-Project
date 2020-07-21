@@ -1,201 +1,201 @@
-﻿Id,EmployeeName,JobTitle,TotalPay,Year
-1,Nathaniel Ford,General Manager-Metropolitan Transit Authority,567595.43,2011
-2,Gary Jimenez,Captain (Police Department),538909.28,2011
-3,Albert Pardini,Captain (Police Department),335279.91,2011
-4,Christopher Chong,Wire Rope Cable Maintenance Mechanic,332343.61,2011
-5,Patrick Gardner,"Deputy Chief Of Department,(Fire Department)",326373.19,2011
-6,David Sullivan,Assistant Deputy Chief,316285.74,2011
-7,Alson Lee,"Battalion Chief, (Fire Department)",315981.05,2011
-8,David Kushner,Deputy Director Of Investments,307899.46,2011
-9,Michael Morris,"Battalion Chief, (Fire Department)",303427.55,2011
-10,Joanne Hayes-White,"Chief Of Department, (Fire Department)",302377.73,2011
-11,Arthur Kenney,"Assistant Chief Of Department, (Fire Department)",299494.17,2011
-12,Patricia Jackson,Captain  (Police Department),297608.92,2011
-13,Edward Harrington,Executive Contract Employee,294580.02,2011
-14,John Martin,Department Head,292671.62,2011
-15,David Franklin,"Battalion Chief, (Fire Department)",286347.05,2011
-16,Richard Corriea,"Commander, (Police Department)",286213.86,2011
-17,Amy Hart,Department Head,284720.43,2011
-18,Sebastian Wong,"Captain, Emergencycy Medical Services",278569.21,2011
-19,Marty Ross,"Battalion Chief, (Fire Department)",276434.22,2011
-20,Ellen Moffatt,Assistant Medical Examiner,274550.25,2011
-21,Venus Azar,Assistant Medical Examiner,274190.27,2011
-22,Judy Melinek,Assistant Medical Examiner,273771.21,2011
-23,George Garcia,"Captain, Fire Suppression",273702.71,2011
-24,Victor Wyrsch,"Battalion Chief, (Fire Department)",270672.63,2011
-25,Joseph Driscoll,"Captain, Fire Suppression",270324.91,2011
-26,Gregory Suhr,Chief Of Police,267992.59,2011
-27,John Hanley,"Captain, Fire Suppression",265784.56,2011
-28,Raymond Guzman,"Battalion Chief, (Fire Department)",265463.46,2011
-29,Denise Schmitt,Deputy Chief (Police Department),264074.60,2011
-30,Monica Fields,"Deputy Chief Of Department,(Fire Department)",261366.14,2011
-31,Harlan Kelly-Jr,Executive Contract Employee,260297.66,2011
-32,David Shinn,Deputy Chief (Police Department),259927.11,2011
-33,Gary Amelio,Department Head,259684.88,2011
-34,John Tursi,"Inspector, (Police Department)",258588.39,2011
-35,Jose Velo,"Battalion Chief, (Fire Department)",258364.22,2011
-36,Khoa Trinh,Electronic Maintenance Technician,257540.09,2011
-37,Susan Currin,"Administrator, Sfgh Medical Center",257124.44,2011
-38,James Bosch,"Inspector, (Police Department)",253269.44,2011
-39,Jones Wong,Lieutenant (Police Department),251935.01,2011
-40,Brendan Ward,"Battalion Chief, (Fire Department)",251685.16,2011
-41,Michael Thompson,"Battalion Chief, (Fire Department)",250595.39,2011
-42,Thomas Abbott,"Battalion Chief, (Fire Department)",250408.49,2011
-43,Thomas Siragusa,"Deputy Chief Of Department,(Fire Department)",250339.35,2012
-44,Michael Thompson,Firefighter,250317.93,2012
-45,Sharon Mccole Wicher,Nursing Supervisor Psychiatric,250122.04,2012
-46,Edwin Lee,Mayor,249375.02,2012
-47,Bryan Rubenstein,"Battalion Chief, (Fire Department)",249293.30,2012
-48,Trent Rhorer,Department Head,248895.77,2012
-49,James Dudley,Deputy Chief (Police Department),248718.64,2012
-50,Ken Yee,"Lieutenant, Fire Department",248434.39,2012
-51,Kirk Richardson,"Battalion Chief, (Fire Department)",247254.61,2012
-52,Barbara Garcia,Department Head,246305.62,2012
-53,Michael Rolovich,"Captain, Fire Suppression",244687.81,2012
-54,Darryl Hunter,"Captain, Fire Suppression",242742.85,2012
-55,Ray Crawford,"Captain, Emergencycy Medical Services",241286.42,2012
-56,Kevin Cashman,Deputy Chief (Police Department),241211.17,2012
-57,Benjamin Rosenfield,Department Head,240846.30,2012
-58,Mark Kearney,Assistant Deputy Chief,240019.10,2012
-59,Douglas Riba,Incident Support Specialist,239426.36,2013
-60,Ai-Kyung Chung,Anesthetist,238879.20,2013
-61,Kenneth Smith,"Lieutenant, Fire Department",238803.56,2013
-62,Anna Brown,Captain (Police Department),238551.88,2013
-63,James Fazackerley,"Captain, Emergencycy Medical Services",238501.05,2013
-64,Charles Crane,"Battalion Chief, (Fire Department)",238479.28,2013
-65,Gregory Mar,Lieutenant (Police Department),237837.73,2013
-66,Richard Parry,Captain (Police Department),237708.83,2013
-67,Robert Postel,"Assistant Chief Of Department, (Fire Department)",237344.41,2013
-68,Edward Roland,"Captain, Fire Suppression",236833.82,2013
-69,Thomas Shawyer,Deputy Chief (Police Department),236200.92,2013
-70,Wing Chan,Incident Support Specialist,234865.20,2013
-71,George Gascon,District Attorney,234848.11,2013
-72,Richard Busalacchi,"Battalion Chief, (Fire Department)",233944.48,2013
-73,Lawrence Freed,"Electrical Transit Mechanic, Assistant Supervisor",233464.63,2014
-74,Monique Moyer,Port Director,233357.28,2014
-75,Antonio Flores,"Inspector, (Police Department)",232702.58,2014
-76,Mark Gamble,"Inspector, (Police Department)",232486.72,2014
-77,Kevin Burke,"Battalion Chief, (Fire Department)",232007.77,2014
-78,Bert Reyes,"Lieutenant, Bureau Of Fire Prevention And Public S",231712.80,2014
-79,Michael Delane,"Captain, Fire Suppression",231652.13,2014
-80,Eduardo Gonzalez,"Battalion Chief, (Fire Department)",231592.25,2014
-81,Yifang Qian,Senior Physician Specialist,231306.04,2014
-82,Robert Winslow,"Lieutenant, Fire Department",231104.97,2014
-83,Lorrie Kalos,"Battalion Chief, (Fire Department)",230906.51,2014
-84,Edward Reiskin,General Manager-Metropolitan Transit Authority,230827.12,2014
-85,Jeffrey Myers,"Captain, Emergencycy Medical Services",230627.21,2014
-86,Jonathan Baxter,Fire Fighter Paramedic,230543.46,2015
-87,Michael Bryant,"Battalion Chief, (Fire Department)",230459.00,2015
-88,Kevin Barry,Manager,230377.83,2015
-89,Evette Geer-Stevens,Transit Supervisor,230239.98,2015
-90,Mary Tse,"Inspector, Bureau Of Fire Prevention And Public Sa",230149.28,2015
-91,Mark Gonzales,"Battalion Chief, (Fire Department)",229060.63,2015
-92,Donna Meixner,Captain  (Police Department),228615.61,2015
-93,Pete Fay Jr,"Captain, Fire Suppression",228513.40,2015
-94,John Murphy,Captain  (Police Department),228207.86,2015
-95,Rex Hale,"Battalion Chief, (Fire Department)",227318.90,2015
-96,Mivic Hirose,Manager,227180.76,2015
-97,Sarah Cary,Anesthetist,227080.50,2015
-98,Kevin Smith,"Battalion Chief, (Fire Department)",226357.33,2015
-99,Gregory Stangland,Fire Fighter Paramedic,224439.97,2016
-100,Sonali Bose,Deputy Director - Municipal Transportation Ag,224035.85,2016
-101,Kevin Taylor,"Battalion Chief, (Fire Department)",223852.35,2016
-102,Erika Hoo,"Lieutenant, Fire Department",223706.40,2016
-103,Lauifi Seumaala,Firefighter,223360.00,2016
-104,Edward Dennis,Transit Supervisor,222408.25,2016
-105,Patric Steele,Firefighter,222091.00,2016
-106,Michael Walsh,Firefighter,221188.58,2016
-107,Samson Lai,"Battalion Chief, (Fire Department)",221049.32,2016
-108,Ana Sampera,Nursing Supervisor,220788.36,2016
-109,Gloria Garcia Orme,Nursing Supervisor,220788.36,2016
-110,Scott Scholzen,Firefighter,220744.85,2016
-111,Mark Smith,Anesthetist,220410.03,2016
-112,C Petruzzella,Police Officer ,220356.48,2016
-113,John Haley Jr,Deputy Director - Municipal Transportation Ag,220352.22,2016
-114,Nela Ponferrada,Nursing Supervisor,220280.30,2017
-115,Charles Scott,Transit Supervisor,220246.26,2017
-116,Lisette Adams,Sheriff'S Lieutenant,219932.32,2017
-117,Jackson Wong,Deputy Director,219804.34,2017
-118,Irene Sung,Supervising Physician Specialist,219712.35,2017
-119,Khairul Ali,"Battalion Chief, (Fire Department)",218793.75,2017
-120,Leslie Dubbin,Nursing Supervisor,218677.76,2017
-121,Michael Castagnola,"Captain, Fire Suppression",218206.04,2017
-122,Shelley Mitchell,Anesthetist,217979.35,2017
-123,Sean Bonetti,Fire Fighter Paramedic,217962.02,2017
-124,Susan Ilnicki,Nursing Supervisor,217810.75,2017
-125,Tyronne Julian,Transit Supervisor,217572.43,2017
-126,Sharon Ferrigno,Captain  (Police Department),217342.95,2017
-127,Shannon Sakowski,Anesthetist,217144.00,2017
-128,John Hickey,"Battalion Chief, (Fire Department)",216981.27,2017
-129,Glen Kojimoto,"Captain, Fire Suppression",216724.17,2017
-130,Edward Chu,"Lieutenant, Fire Department",216418.73,2017
-131,Sofia Mathews,"Lieutenant, Bureau Of Fire Prevention And Public S",216270.80,2017
-132,Edmund Dea,"Captain, Fire Suppression",216176.09,2017
-133,John Rahaim,Department Head,215799.48,2017
-134,William Roualdes,Lieutenant  (Police Department),215413.23,2017
-135,Zachary Pumphrey,"Battalion Chief, (Fire Department)",215396.50,2017
-136,Mark Castagnola,"Lieutenant, Fire Department",215355.11,2018
-137,Nikolas Lemos,Forensic Toxicologist,215318.20,2018
-138,Michael Carlin,Deputy Director,215180.75,2018
-139,Jesse Smith,Confidential Chief Attorney (Civil & Criminal),214988.68,2018
-140,Therese Stewart,Confidential Chief Attorney (Civil & Criminal),214988.68,2018
-141,Marisa Moret,Confidential Chief Attorney (Civil & Criminal),214988.68,2018
-142,Luis Ibarra-Rivera,"Lieutenant, Fire Department",214955.60,2018
-143,Gerald Darcy,Sergeant  (Police Department),214944.74,2018
-144,Donnie Hornbuckle,Firefighter,214852.45,2018
-145,Sandra Tong,"Commander , (Police Department)",214815.91,2018
-146,Anthony Dumont,"Captain, Emergencycy Medical Services",214185.09,2018
-147,Theresa Dentoni,Nursing Supervisor,214156.80,2018
-148,Tim Areja,Firefighter,213860.61,2018
-149,Siu-Kwan Chow,Senior Physician Specialist,213735.62,2018
-150,Patricia Carr,Nursing Supervisor,213659.46,2019
-151,Rasmi Chan,Firefighter,213537.88,2019
-152,Michael Kearney,"Battalion Chief, (Fire Department)",212951.48,2019
-153,Matthew Mcnaughton,"Battalion Chief, (Fire Department)",212857.66,2019
-154,John Cavanaugh,"Captain, Emergencycy Medical Services",212837.73,2019
-155,Whitney Yee,Deputy Sheriff,212705.52,2019
-156,Steven Mannina,Lieutenant  (Police Department),212650.20,2019
-157,Edgar Callejas,Sergeant  (Police Department),212179.09,2019
-158,L Militello,"Commander, (Police Department)",211710.05,2019
-159,Michael Biel,"Commander, (Police Department)",211596.24,2019
-160,Debra Johnson,Deputy Director - Municipal Transportation Ag,210821.61,2019
-161,Harold Byrd,Transit Supervisor,210635.36,2019
-162,Karl Jurgenson,Fire Fighter Paramedic,210578.32,2019
-163,Julie Labonte,Manager,210404.57,2019
-164,John Bragagnolo,Sergeant  (Police Department),210076.88,2019
-165,Oscar Cabrera,Fire Fighter Paramedic,209889.47,2019
-166,Martien Verhaeg,Firefighter,209805.64,2019
-167,Thomas Aldana,Transit Supervisor,209762.44,2019
-168,Carl Jepsen,Firefighter,209716.56,2019
-169,Amparo Rodriguez,Nurse Manager,209640.87,2019
-170,William Scott,"Inspector , (Police Department)",209386.43,2019
-171,George Lysenko,"Lieutenant, Fire Department",209304.53,2019
-172,Michael Browne,Sergeant  (Police Department),209213.81,2020
-173,Harry Pinkard,"Captain, Fire Suppression",209069.99,2020
-174,Alberto Pedruco,"Lieutenant, Fire Department",209044.19,2020
-175,Lawrence Lee,Electrical Transit System Mechanic,208909.76,2020
-176,Dwayne Curry,"Lieutenant, Fire Department",208742.56,2020
-177,Renee Marquardt,Senior Physician Specialist,208703.72,2020
-178,Harvey Elwin,Manager,208385.64,2020
-179,Leon White,Fire Fighter Paramedic,208337.48,2020
-180,Dennis Herrera,City Attorney,208243.12,2020
-181,Donald Bryant,Electrical Transit System Mechanic,208208.63,2020
-182,Nathan Hardy,Marine Engineer Of Fire Boats,208022.90,2020
-183,Susan Buchbinder,Manager,207874.94,2020
-184,Kirsten Barash,Anesthetist,207855.52,2020
-185,Dennis Sutter,"Battalion Chief, (Fire Department)",207815.63,2020
-186,John Brown,Manager,207798.79,2020
-187,Kathryn Ballou,Nursing Supervisor Psychiatric,207707.76,2020
-188,Donald Fields,"Lieutenant, Bureau Of Fire Prevention And Public Safety",207703.20,2020
-189,Luis Herrera,Department Head,207699.73,2020
-190,George Fouras,Senior Physician Specialist,207300.14,2020
-191,Martin Lalor Jr,Sergeant  (Police Department),207277.85,2020
-192,Grad Green,Nursing Supervisor Psychiatric,207220.74,2020
-193,Darcy Keller,"Inspector , (Police Department)",207087.03,2020
-194,Samuel Romero,"Captain, Fire Suppression",206975.81,2020
-195,Alexander Chen,Senior Physician Specialist,206800.28,2020
-196,Ollie Banks,Firefighter,206769.39,2020
-197,Burk Delventhal,Chief Attorney (Civil & Criminal),206752.00,2020
-198,Thomas Harvey,"Captain, Bureau Of Fire Prevention And Public Safety",206704.63,2020
-199,Martin Beltran,Firefighter,206702.36,2020
-200,Lori Borghi,Anesthetist,206520.09,2020
+﻿Id,EmployeeName,JobTitle,TotalPay
+1,Nathaniel Ford,General Manager-Metropolitan Transit Authority,567595.43
+2,Gary Jimenez,Captain (Police Department),538909.28
+3,Albert Pardini,Captain (Police Department),335279.91
+4,Christopher Chong,Wire Rope Cable Maintenance Mechanic,332343.61
+5,Patrick Gardner,"Deputy Chief Of Department,(Fire Department)",326373.19
+6,David Sullivan,Assistant Deputy Chief,316285.74
+7,Alson Lee,"Battalion Chief, (Fire Department)",315981.05
+8,David Kushner,Deputy Director Of Investments,307899.46
+9,Michael Morris,"Battalion Chief, (Fire Department)",303427.55
+10,Joanne Hayes-White,"Chief Of Department, (Fire Department)",302377.73
+11,Arthur Kenney,"Assistant Chief Of Department, (Fire Department)",299494.17
+12,Patricia Jackson,Captain  (Police Department),297608.92
+13,Edward Harrington,Executive Contract Employee,294580.02
+14,John Martin,Department Head,292671.62
+15,David Franklin,"Battalion Chief, (Fire Department)",286347.05
+16,Richard Corriea,"Commander, (Police Department)",286213.86
+17,Amy Hart,Department Head,284720.43
+18,Sebastian Wong,"Captain, Emergencycy Medical Services",278569.21
+19,Marty Ross,"Battalion Chief, (Fire Department)",276434.22
+20,Ellen Moffatt,Assistant Medical Examiner,274550.25
+21,Venus Azar,Assistant Medical Examiner,274190.27
+22,Judy Melinek,Assistant Medical Examiner,273771.21
+23,George Garcia,"Captain, Fire Suppression",273702.71
+24,Victor Wyrsch,"Battalion Chief, (Fire Department)",270672.63
+25,Joseph Driscoll,"Captain, Fire Suppression",270324.91
+26,Gregory Suhr,Chief Of Police,267992.59
+27,John Hanley,"Captain, Fire Suppression",265784.56
+28,Raymond Guzman,"Battalion Chief, (Fire Department)",265463.46
+29,Denise Schmitt,Deputy Chief (Police Department),264074.6
+30,Monica Fields,"Deputy Chief Of Department,(Fire Department)",261366.14
+31,Harlan Kelly-Jr,Executive Contract Employee,260297.66
+32,David Shinn,Deputy Chief (Police Department),259927.11
+33,Gary Amelio,Department Head,259684.88
+34,John Tursi,"Inspector, (Police Department)",258588.39
+35,Jose Velo,"Battalion Chief, (Fire Department)",258364.22
+36,Khoa Trinh,Electronic Maintenance Technician,257540.09
+37,Susan Currin,"Administrator, Sfgh Medical Center",257124.44
+38,James Bosch,"Inspector, (Police Department)",253269.44
+39,Jones Wong,Lieutenant (Police Department),251935.01
+40,Brendan Ward,"Battalion Chief, (Fire Department)",251685.16
+41,Michael Thompson,"Battalion Chief, (Fire Department)",250595.39
+42,Thomas Abbott,"Battalion Chief, (Fire Department)",250408.49
+43,Thomas Siragusa,"Deputy Chief Of Department,(Fire Department)",250339.35
+44,Michael Thompson,Firefighter,250317.93
+45,Sharon Mccole Wicher,Nursing Supervisor Psychiatric,250122.04
+46,Edwin Lee,Mayor,249375.02
+47,Bryan Rubenstein,"Battalion Chief, (Fire Department)",249293.3
+48,Trent Rhorer,Department Head,248895.77
+49,James Dudley,Deputy Chief (Police Department),248718.64
+50,Ken Yee,"Lieutenant, Fire Department",248434.39
+51,Kirk Richardson,"Battalion Chief, (Fire Department)",247254.61
+52,Barbara Garcia,Department Head,246305.62
+53,Michael Rolovich,"Captain, Fire Suppression",244687.81
+54,Darryl Hunter,"Captain, Fire Suppression",242742.85
+55,Ray Crawford,"Captain, Emergencycy Medical Services",241286.42
+56,Kevin Cashman,Deputy Chief (Police Department),241211.17
+57,Benjamin Rosenfield,Department Head,240846.3
+58,Mark Kearney,Assistant Deputy Chief,240019.1
+59,Douglas Riba,Incident Support Specialist,239426.36
+60,Ai-Kyung Chung,Anesthetist,238879.2
+61,Kenneth Smith,"Lieutenant, Fire Department",238803.56
+62,Anna Brown,Captain (Police Department),238551.88
+63,James Fazackerley,"Captain, Emergencycy Medical Services",238501.05
+64,Charles Crane,"Battalion Chief, (Fire Department)",238479.28
+65,Gregory Mar,Lieutenant (Police Department),237837.73
+66,Richard Parry,Captain (Police Department),237708.83
+67,Robert Postel,"Assistant Chief Of Department, (Fire Department)",237344.41
+68,Edward Roland,"Captain, Fire Suppression",236833.82
+69,Thomas Shawyer,Deputy Chief (Police Department),236200.92
+70,Wing Chan,Incident Support Specialist,234865.2
+71,George Gascon,District Attorney,234848.11
+72,Richard Busalacchi,"Battalion Chief, (Fire Department)",233944.48
+73,Lawrence Freed,"Electrical Transit Mechanic, Assistant Supervisor",233464.63
+74,Monique Moyer,Port Director,233357.28
+75,Antonio Flores,"Inspector, (Police Department)",232702.58
+76,Mark Gamble,"Inspector, (Police Department)",232486.72
+77,Kevin Burke,"Battalion Chief, (Fire Department)",232007.77
+78,Bert Reyes,"Lieutenant, Bureau Of Fire Prevention And Public S",231712.8
+79,Michael Delane,"Captain, Fire Suppression",231652.13
+80,Eduardo Gonzalez,"Battalion Chief, (Fire Department)",231592.25
+81,Yifang Qian,Senior Physician Specialist,231306.04
+82,Robert Winslow,"Lieutenant, Fire Department",231104.97
+83,Lorrie Kalos,"Battalion Chief, (Fire Department)",230906.51
+84,Edward Reiskin,General Manager-Metropolitan Transit Authority,230827.12
+85,Jeffrey Myers,"Captain, Emergencycy Medical Services",230627.21
+86,Jonathan Baxter,Fire Fighter Paramedic,230543.46
+87,Michael Bryant,"Battalion Chief, (Fire Department)",230459
+88,Kevin Barry,Manager,230377.83
+89,Evette Geer-Stevens,Transit Supervisor,230239.98
+90,Mary Tse,"Inspector, Bureau Of Fire Prevention And Public Sa",230149.28
+91,Mark Gonzales,"Battalion Chief, (Fire Department)",229060.63
+92,Donna Meixner,Captain  (Police Department),228615.61
+93,Pete Fay Jr,"Captain, Fire Suppression",228513.4
+94,John Murphy,Captain  (Police Department),228207.86
+95,Rex Hale,"Battalion Chief, (Fire Department)",227318.9
+96,Mivic Hirose,Manager,227180.76
+97,Sarah Cary,Anesthetist,227080.5
+98,Kevin Smith,"Battalion Chief, (Fire Department)",226357.33
+99,Gregory Stangland,Fire Fighter Paramedic,224439.97
+100,Sonali Bose,Deputy Director - Municipal Transportation Ag,224035.85
+101,Kevin Taylor,"Battalion Chief, (Fire Department)",223852.35
+102,Erika Hoo,"Lieutenant, Fire Department",223706.4
+103,Lauifi Seumaala,Firefighter,223360
+104,Edward Dennis,Transit Supervisor,222408.25
+105,Patric Steele,Firefighter,222091
+106,Michael Walsh,Firefighter,221188.58
+107,Samson Lai,"Battalion Chief, (Fire Department)",221049.32
+108,Ana Sampera,Nursing Supervisor,220788.36
+109,Gloria Garcia Orme,Nursing Supervisor,220788.36
+110,Scott Scholzen,Firefighter,220744.85
+111,Mark Smith,Anesthetist,220410.03
+112,C Petruzzella,Police Officer ,220356.48
+113,John Haley Jr,Deputy Director - Municipal Transportation Ag,220352.22
+114,Nela Ponferrada,Nursing Supervisor,220280.3
+115,Charles Scott,Transit Supervisor,220246.26
+116,Lisette Adams,Sheriff'S Lieutenant,219932.32
+117,Jackson Wong,Deputy Director,219804.34
+118,Irene Sung,Supervising Physician Specialist,219712.35
+119,Khairul Ali,"Battalion Chief, (Fire Department)",218793.75
+120,Leslie Dubbin,Nursing Supervisor,218677.76
+121,Michael Castagnola,"Captain, Fire Suppression",218206.04
+122,Shelley Mitchell,Anesthetist,217979.35
+123,Sean Bonetti,Fire Fighter Paramedic,217962.02
+124,Susan Ilnicki,Nursing Supervisor,217810.75
+125,Tyronne Julian,Transit Supervisor,217572.43
+126,Sharon Ferrigno,Captain  (Police Department),217342.95
+127,Shannon Sakowski,Anesthetist,217144
+128,John Hickey,"Battalion Chief, (Fire Department)",216981.27
+129,Glen Kojimoto,"Captain, Fire Suppression",216724.17
+130,Edward Chu,"Lieutenant, Fire Department",216418.73
+131,Sofia Mathews,"Lieutenant, Bureau Of Fire Prevention And Public S",216270.8
+132,Edmund Dea,"Captain, Fire Suppression",216176.09
+133,John Rahaim,Department Head,215799.48
+134,William Roualdes,Lieutenant  (Police Department),215413.23
+135,Zachary Pumphrey,"Battalion Chief, (Fire Department)",215396.5
+136,Mark Castagnola,"Lieutenant, Fire Department",215355.11
+137,Nikolas Lemos,Forensic Toxicologist,215318.2
+138,Michael Carlin,Deputy Director,215180.75
+139,Jesse Smith,Confidential Chief Attorney (Civil & Criminal),214988.68
+140,Therese Stewart,Confidential Chief Attorney (Civil & Criminal),214988.68
+141,Marisa Moret,Confidential Chief Attorney (Civil & Criminal),214988.68
+142,Luis Ibarra-Rivera,"Lieutenant, Fire Department",214955.6
+143,Gerald Darcy,Sergeant  (Police Department),214944.74
+144,Donnie Hornbuckle,Firefighter,214852.45
+145,Sandra Tong,"Commander , (Police Department)",214815.91
+146,Anthony Dumont,"Captain, Emergencycy Medical Services",214185.09
+147,Theresa Dentoni,Nursing Supervisor,214156.8
+148,Tim Areja,Firefighter,213860.61
+149,Siu-Kwan Chow,Senior Physician Specialist,213735.62
+150,Patricia Carr,Nursing Supervisor,213659.46
+151,Rasmi Chan,Firefighter,213537.88
+152,Michael Kearney,"Battalion Chief, (Fire Department)",212951.48
+153,Matthew Mcnaughton,"Battalion Chief, (Fire Department)",212857.66
+154,John Cavanaugh,"Captain, Emergencycy Medical Services",212837.73
+155,Whitney Yee,Deputy Sheriff,212705.52
+156,Steven Mannina,Lieutenant  (Police Department),212650.2
+157,Edgar Callejas,Sergeant  (Police Department),212179.09
+158,L Militello,"Commander, (Police Department)",211710.05
+159,Michael Biel,"Commander, (Police Department)",211596.24
+160,Debra Johnson,Deputy Director - Municipal Transportation Ag,210821.61
+161,Harold Byrd,Transit Supervisor,210635.36
+162,Karl Jurgenson,Fire Fighter Paramedic,210578.32
+163,Julie Labonte,Manager,210404.57
+164,John Bragagnolo,Sergeant  (Police Department),210076.88
+165,Oscar Cabrera,Fire Fighter Paramedic,209889.47
+166,Martien Verhaeg,Firefighter,209805.64
+167,Thomas Aldana,Transit Supervisor,209762.44
+168,Carl Jepsen,Firefighter,209716.56
+169,Amparo Rodriguez,Nurse Manager,209640.87
+170,William Scott,"Inspector , (Police Department)",209386.43
+171,George Lysenko,"Lieutenant, Fire Department",209304.53
+172,Michael Browne,Sergeant  (Police Department),209213.81
+173,Harry Pinkard,"Captain, Fire Suppression",209069.99
+174,Alberto Pedruco,"Lieutenant, Fire Department",209044.19
+175,Lawrence Lee,Electrical Transit System Mechanic,208909.76
+176,Dwayne Curry,"Lieutenant, Fire Department",208742.56
+177,Renee Marquardt,Senior Physician Specialist,208703.72
+178,Harvey Elwin,Manager,208385.64
+179,Leon White,Fire Fighter Paramedic,208337.48
+180,Dennis Herrera,City Attorney,208243.12
+181,Donald Bryant,Electrical Transit System Mechanic,208208.63
+182,Nathan Hardy,Marine Engineer Of Fire Boats,208022.9
+183,Susan Buchbinder,Manager,207874.94
+184,Kirsten Barash,Anesthetist,207855.52
+185,Dennis Sutter,"Battalion Chief, (Fire Department)",207815.63
+186,John Brown,Manager,207798.79
+187,Kathryn Ballou,Nursing Supervisor Psychiatric,207707.76
+188,Donald Fields,"Lieutenant, Bureau Of Fire Prevention And Public Safety",207703.2
+189,Luis Herrera,Department Head,207699.73
+190,George Fouras,Senior Physician Specialist,207300.14
+191,Martin Lalor Jr,Sergeant  (Police Department),207277.85
+192,Grad Green,Nursing Supervisor Psychiatric,207220.74
+193,Darcy Keller,"Inspector , (Police Department)",207087.03
+194,Samuel Romero,"Captain, Fire Suppression",206975.81
+195,Alexander Chen,Senior Physician Specialist,206800.28
+196,Ollie Banks,Firefighter,206769.39
+197,Burk Delventhal,Chief Attorney (Civil & Criminal),206752
+198,Thomas Harvey,"Captain, Bureau Of Fire Prevention And Public Safety",206704.63
+199,Martin Beltran,Firefighter,206702.36
+200,Lori Borghi,Anesthetist,206520.09
