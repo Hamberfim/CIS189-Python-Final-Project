@@ -34,7 +34,7 @@ db_is_new = not os.path.exists(db_file_name)
 if db_is_new:
     # csv-to-sqlite --help
     # SQLite type and encoding options
-    opt = csv_to_sqlite.CsvOptions(typing_style="none", encoding="UTF-8")
+    opt = csv_to_sqlite.CsvOptions(typing_style="full", encoding="UTF-8")
     # a list of CSV files separated by commas
     input_files = ["employees.csv"]
     # write the database
@@ -61,7 +61,7 @@ def create_employee(conn, employee):
     :param employee:
     :return: employee id
     """
-    sql = ''' INSERT INTO employees("﻿EmployeeName", JobTitle, TotalPay)
+    sql = ''' INSERT INTO employees(﻿EmployeeName, JobTitle, TotalPay)
               VALUES(?,?,?) '''
     cur = conn.cursor()  # cursor object
     cur.execute(sql, employee)
@@ -88,10 +88,9 @@ if __name__ == '__main__':
     """
     results = select_all_rows(sqlite3.connect(db_file_name))
     for row in results:
-        print(row)
+        print(row)"""
     conn = create_connection(db_file_name)
     with conn:
         # EmployeeName, JobTitle, TotalPay
         employee = ('William Rouge', 'Editor', '32000.00')
-        emp_editor = create_employee(conn, employee)"""
-    pass
+        emp_editor = create_employee(conn, employee)
