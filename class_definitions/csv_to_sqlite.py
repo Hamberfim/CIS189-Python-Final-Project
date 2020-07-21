@@ -1,5 +1,9 @@
 """
 @author: Ladislav Benc
+
+The MIT License (MIT)
+Copyright (c) 2016 Ladislav Benc
+- https://github.com/zblesk/csv-to-sqlite/blob/master/LICENSE.txt
 - https://zblesk.net/blog
 - https://zblesk.net/blog/csv-to-sqlite-2-1/
 
