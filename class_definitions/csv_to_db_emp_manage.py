@@ -84,13 +84,14 @@ def select_all_rows(conn):
 
 
 if __name__ == '__main__':
+    # TODO: remove after testing
     """
     results = select_all_rows(sqlite3.connect(db_file_name))
     for row in results:
-        print(row)"""
-    # TODO: remove after testing
+        print(row)
     conn = create_connection(db_file_name)
     with conn:
         # EmployeeName, JobTitle, TotalPay
         employee = ('William Rouge', 'Editor', '32000.00')
-        emp_editor = create_employee(conn, employee)
+        emp_editor = create_employee(conn, employee)"""
+    pass
