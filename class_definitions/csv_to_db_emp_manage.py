@@ -15,8 +15,8 @@ and then the database is managed through a tkinter GUI.
             * populate the table with the data.
         else:
             * make db connection
-TODO:
             * provide CRUD functionality
+TODO:
     Build GUI on top with CRUD functionality
 """
 import os
@@ -115,7 +115,7 @@ def delete_employee(conn, oid):
     """
     sql = 'DELETE FROM employees WHERE oid=?'
     cur = conn.cursor()
-    cur.execute(sql, (id,))
+    cur.execute(sql, (oid,))
 
 
 if __name__ == '__main__':
@@ -149,11 +149,11 @@ if __name__ == '__main__':
 
         rows = select_all_employees(conn)
         for row in rows:
-            print(row)"""
+            print(row)
 
     conn = create_connection(db_file_name)
     with conn:
         delete_employee(conn, 101)
         rows = select_all_employees(conn)
         for row in rows:
-            print(row)
+            print(row)"""
