@@ -39,4 +39,5 @@ if db_is_new:
     # write the database
     csv_to_sqlite.write_csv(input_files, db_file_name, opt)
 else:
+    # console output
     print(db_file_name, "database already exists.")
