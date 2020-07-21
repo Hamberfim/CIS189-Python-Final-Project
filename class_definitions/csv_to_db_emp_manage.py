@@ -55,13 +55,27 @@ def create_connection(db_file_name):
         print(err)
 
 
+def create_employee(conn, employee):
+    """Create a new person for table
+    :param conn:
+    :param employee:
+    :return: employee id
+    """
+    sql = ''' INSERT INTO employees(EmployeeName, JobTitle, TotalPay)
+              VALUES(?,?,?) '''
+    cur = conn.cursor()  # cursor object
+    cur.execute(sql, employee)
+    # returns the row id of the cursor object, the student id
+    return cur.lastrowid
+
+
 def select_all_rows(conn):
     """Query all rows of employee table
     :param conn: the connection object
     :return: all rows of employee table
     """
     cur = conn.cursor()
-    cur.execute("SELECT * FROM employees")
+    cur.execute("SELECT oid, * FROM employees")
 
     rows = cur.fetchall()
 
@@ -70,7 +84,13 @@ def select_all_rows(conn):
 
 
 if __name__ == '__main__':
-    # TODO: remove after testing
+
     results = select_all_rows(sqlite3.connect(db_file_name))
     for row in results:
         print(row)
+    # TODO: remove after testing
+    """conn = create_connection(db_file_name)
+    with conn:
+        # EmployeeName, JobTitle, TotalPay
+        employee = ('William Rouge', 'Editor', 32000.00)
+        emp_editor = create_employee(conn, employee)"""
