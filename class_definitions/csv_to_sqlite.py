@@ -3,7 +3,7 @@
 - https://zblesk.net/blog
 - https://zblesk.net/blog/csv-to-sqlite-2-1/
 
-A script that processes the input CSV files
+A script that processes input CSV files
 then copies them into a SQLite database."""
 import csv
 import sqlite3
