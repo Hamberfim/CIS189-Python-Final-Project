@@ -94,4 +94,20 @@ scroll = scrolledtext.ScrolledText(win, width=scrollW, height=scrollH,
                                    wrap=tk.WORD)
 scroll.grid(row=7, column=0)
 
+# container to hold multiple labels
+labels_frame = ttk.LabelFrame(win, text='Labels in a frame')
+labels_frame.grid(row=8, sticky=tk.W, column=0)
+
+# place the labels in the parent 'labels_frame' not 'win'  - vert
+ttk.Label(labels_frame, text='Label A').grid(row=0, sticky=tk.W, column=0)
+ttk.Label(labels_frame, text='Label B').grid(row=1, sticky=tk.W, column=0)
+ttk.Label(labels_frame, text='Label C').grid(row=2, sticky=tk.W, column=0)
+# place the labels in the parent 'labels_frame' not 'win'  - horz
+ttk.Label(labels_frame, text='').grid(row=3, sticky=tk.W, column=0)  # empty
+ttk.Label(labels_frame, text='Label D').grid(row=4, sticky=tk.W, column=0)
+ttk.Label(labels_frame, text='Label E').grid(row=4, sticky=tk.W, column=1)
+ttk.Label(labels_frame, text='Label F').grid(row=4, sticky=tk.W, column=2)
+ttk.Label(labels_frame, text='Label G').grid(row=4, sticky=tk.W, column=3)
+ttk.Label(labels_frame, text='Label H').grid(row=4, sticky=tk.W, column=4)
+
 win.mainloop()
