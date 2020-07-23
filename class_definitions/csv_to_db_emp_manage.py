@@ -66,6 +66,7 @@ def create_employee(conn, employee):
     cur = conn.cursor()  # cursor object
     cur.execute(sql, employee)
     # returns the row id of the cursor object, the student id
+    conn.commit()
     return cur.lastrowid
 
 
@@ -92,6 +93,7 @@ def update_employee_name(conn, employee):
               WHERE oid = ?'''
     cur = conn.cursor()
     cur.execute(sql, employee)
+    conn.commit()
 
 
 def update_employee_pay(conn, employee):
@@ -105,6 +107,7 @@ def update_employee_pay(conn, employee):
               WHERE oid = ?'''
     cur = conn.cursor()
     cur.execute(sql, employee)
+    conn.commit()
 
 
 def update_employee_title(conn, employee):
@@ -118,6 +121,7 @@ def update_employee_title(conn, employee):
               WHERE oid = ?'''
     cur = conn.cursor()
     cur.execute(sql, employee)
+    conn.commit()
 
 
 def delete_employee(conn, oid):
@@ -129,6 +133,7 @@ def delete_employee(conn, oid):
     sql = '''DELETE FROM employees WHERE oid=?;'''
     cur = conn.cursor()
     cur.execute(sql, (oid,))
+    conn.commit()
 
 
 def column_names(conn):
@@ -150,7 +155,7 @@ if __name__ == '__main__':
     results = select_all_employees(sqlite3.connect(db_file_name))
     for row in results:
         print(row)
-
+    
     # create a new record
     conn = create_connection(db_file_name)
     with conn:
@@ -168,7 +173,7 @@ if __name__ == '__main__':
         rows = select_all_employees(conn)
         for row in rows:
             print(row)
-
+    
     # update job title
     conn = create_connection(db_file_name)
     with conn:
@@ -176,14 +181,6 @@ if __name__ == '__main__':
         employee = ('Chief Editor', 101)
         update_employee_title(conn, employee)
 
-        rows = select_all_employees(conn)
-        for row in rows:
-            print(row)
-
-    # delete record
-    conn = create_connection(db_file_name)
-    with conn:
-        delete_employee(conn, 101)
         rows = select_all_employees(conn)
         for row in rows:
             print(row)
@@ -198,6 +195,15 @@ if __name__ == '__main__':
         rows = select_all_employees(conn)
         for row in rows:
             print(row)
+    
+    # delete record
+    conn = create_connection(db_file_name)
+    with conn:
+        delete_employee(conn, 101)
+        rows = select_all_employees(conn)
+        for row in rows:
+            print(row)
+    
     # get the column names, equivalent to INFORMATION_SCHEMA.COLUMNS
     col_names = column_names(sqlite3.connect(db_file_name))
     for col in col_names:
