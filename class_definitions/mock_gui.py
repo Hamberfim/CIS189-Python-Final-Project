@@ -110,4 +110,8 @@ ttk.Label(labels_frame, text='Label F').grid(row=4, sticky=tk.W, column=2)
 ttk.Label(labels_frame, text='Label G').grid(row=4, sticky=tk.W, column=3)
 ttk.Label(labels_frame, text='Label H').grid(row=4, sticky=tk.W, column=4)
 
+# control label spacing in the 'labels_frame' with a loop
+for child in labels_frame.winfo_children():
+    child.grid_configure(padx=5, pady=5)
+
 win.mainloop()
