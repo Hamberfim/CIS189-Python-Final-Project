@@ -3,24 +3,27 @@ import tkinter as tk
 from tkinter import ttk
 
 win = tk.Tk()
+win.attributes("-topmost", True)
 win.title("Employee Data Management")
 
-f_label = ttk.Label(win, text="first Label")
+# label to change on click
+f_label = ttk.Label(win, text="first (Top) Label")
 f_label.grid(row=0, column=0)
 
 
 def click_action():
     """
-    handles button click actions
+    handles button click actions to change label text
     """
-    action.configure(text='Hello ' + name.get())
+    f_label.configure(text='Hello ' + name.get())
 
 
 name = tk.StringVar()
 name_entry = ttk.Entry(win, width=15, textvariable=name)
 name_entry.grid(row=1, column=0)
 
-action = ttk.Button(win, text='Submit', command=click_action)
-action.grid(row=1, column=1)
+# call click_action to change label with textvariable/StringVar
+action_btn = ttk.Button(win, text='Submit', command=click_action)
+action_btn.grid(row=1, column=1)
 
 win.mainloop()
