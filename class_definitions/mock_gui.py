@@ -3,13 +3,14 @@ import tkinter as tk
 from tkinter import ttk
 
 win = tk.Tk()
-win.resizable(350, 350)
+# set the initial window size (width, height)
+win.minsize(300, 200)
 win.attributes("-topmost", True)
 win.title("Employee Data Management")
 
 # label to change on click
 f_label = ttk.Label(win, text="first (Top) Label")
-f_label.grid(row=0, columnspan=2)
+f_label.grid(row=0, columnspan=4)
 
 
 def click_action():
@@ -22,7 +23,7 @@ def click_action():
 # input field
 name = tk.StringVar()
 name_entry = ttk.Entry(win, width=30, textvariable=name)
-name_entry.grid(row=1, columnspan=3)
+name_entry.grid(row=1, columnspan=4)
 name_entry.focus()
 
 # combo box selection label
@@ -38,7 +39,7 @@ chosen.current(0)
 
 # button to call click_action to change label with textvariable/StringVar
 action_btn = ttk.Button(win, text='Submit', command=click_action)
-action_btn.grid(row=3, columnspan=3)
+action_btn.grid(row=3, columnspan=4)
 
 # radio buttons global values
 COLOR1 = '#44bcd8'
@@ -59,12 +60,12 @@ def radCall():
 
 radVar = tk.IntVar()
 rad1 = tk.Radiobutton(win, text='Blue ' + COLOR1, variable=radVar, value=1, command=radCall)
-rad1.grid(row=4, column=0, sticky=tk.W, columnspan=3)
+rad1.grid(row=4, column=0, sticky=tk.W, columnspan=4)
 
 rad2 = tk.Radiobutton(win, text='Blue ' + COLOR2, variable=radVar, value=2, command=radCall)
-rad2.grid(row=4, column=1, columnspan=3)
+rad2.grid(row=4, column=2, sticky=tk.W, columnspan=4)
 
 rad3 = tk.Radiobutton(win, text='Blue ' + COLOR3, variable=radVar, value=3, command=radCall)
-rad3.grid(row=4, column=2, sticky=tk.E, columnspan=3)
+rad3.grid(row=4, column=3, sticky=tk.E, columnspan=4)
 
 win.mainloop()
