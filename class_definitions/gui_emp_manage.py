@@ -10,8 +10,8 @@ a csv file and creates a SQLite3 database.
 """
 import sqlite3
 from sqlite3 import Error
-from tkinter import *
 import tkinter as tk
+from tkinter import ttk
 from tkinter import W
 from class_definitions import csv_to_db_emp_manage as empdb
 
