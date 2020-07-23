@@ -1,4 +1,9 @@
-"""Used to mock up and test gui look, feel, and positioning"""
+"""
+Created on 7/23/2020
+@author: Anthony Hamlin
+Program: mock_gui.py
+Used to mock up and test gui look, feel, and positioning
+"""
 import tkinter as tk
 from tkinter import ttk
 from tkinter import scrolledtext
