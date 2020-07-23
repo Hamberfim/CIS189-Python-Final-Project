@@ -5,7 +5,7 @@ from tkinter import scrolledtext
 
 win = tk.Tk()
 # set the initial window size (width, height)
-win.minsize(200, 150)
+win.minsize(300, 250)
 win.attributes("-topmost", True)
 win.title("EDMA")
 
@@ -96,7 +96,7 @@ scroll.grid(row=7, column=0)
 
 # container to hold multiple labels
 labels_frame = ttk.LabelFrame(win, text='Labels in a frame')
-labels_frame.grid(row=8, sticky=tk.W, column=0)
+labels_frame.grid(row=8, sticky=tk.W, column=0, padx=7, pady=7)
 
 # place the labels in the parent 'labels_frame' not 'win'  - vert
 ttk.Label(labels_frame, text='Label A').grid(row=0, sticky=tk.W, column=0)
