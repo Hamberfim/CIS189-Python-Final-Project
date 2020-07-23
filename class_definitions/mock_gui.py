@@ -76,10 +76,10 @@ rad3 = tk.Radiobutton(win, text='Blue ' + COLOR3, variable=radVar, value=3,
 rad3.grid(row=6, column=0, sticky=tk.W)
 
 # scroll text control
-scrolW = 25
-scrolH = 5
-scrl = scrolledtext.ScrolledText(win, width=scrolW, height=scrolH,
-                                 wrap=tk.WORD)
-scrl.grid(row=7, column=0)
+scrollW = 25
+scrollH = 5
+scroll = scrolledtext.ScrolledText(win, width=scrollW, height=scrollH,
+                                   wrap=tk.WORD)
+scroll.grid(row=7, column=0)
 
 win.mainloop()
