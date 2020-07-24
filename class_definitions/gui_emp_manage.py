@@ -13,6 +13,7 @@ from sqlite3 import Error
 import tkinter as tk
 from tkinter import ttk
 from tkinter import W
+from tkinter import Menu
 from class_definitions import csv_to_db_emp_manage as empdb
 
 
@@ -69,6 +70,32 @@ class DisplayEDMA:
         ttk.Label(dtab_frame, text="Delete a Record").grid(row=0, sticky="W", column=0)
 
         tab_control.grid()  # make tabs visible
+
+        # menu bar actions
+        def _quit():  # private function
+            """
+            Quit/Destroy Application GUI cleanly
+            """
+            self.win.quit()
+            self.win.destroy()
+            exit()
+
+        # Top Menu bar
+        menu_bar = Menu(self.win)
+        self.win.config(menu=menu_bar)
+        # File Menu Bar items
+        file_menu = Menu(menu_bar, tearoff=0)
+        # TODO: remove unused menu items
+        file_menu.add_command(label="New")
+        file_menu.add_command(label="Save Changes")
+        file_menu.add_separator()
+        file_menu.add_command(label="Exit", command=_quit)
+        menu_bar.add_cascade(label="File", menu=file_menu)
+
+        # help/about menu bar items
+        about_menu = Menu(menu_bar, tearoff=0)
+        about_menu.add_command(label="About")
+        menu_bar.add_cascade(label="Help", menu=about_menu)
 
         self.win.mainloop()
 
