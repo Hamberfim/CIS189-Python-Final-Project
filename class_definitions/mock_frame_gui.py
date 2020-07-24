@@ -5,7 +5,12 @@ Program: mock_frame_gui.py
 Used to mock up and test gui look, feel, and positioning
 """
 import tkinter as tk
+from tkinter import N
+from tkinter import S
+from tkinter import W
+from tkinter import E
 from tkinter import ttk
+from tkinter import scrolledtext
 
 
 win = tk.Tk()
@@ -29,5 +34,17 @@ ttk.Label(frame_col_B, text='Row=1 Col=1').grid(row=0, column=0)
 frame_col_B = ttk.LabelFrame(win, text=' Column C')
 frame_col_B.grid(row=1, sticky=tk.W, column=2, padx=5, pady=5)
 ttk.Label(frame_col_B, text='Row=1 Col=2').grid(row=0, column=0)
+
+
+# scroll text control wrap by word not char
+row_two_fill_colms = ttk.LabelFrame(win, text='Message box')
+row_two_fill_colms.grid(row=2, sticky='WE', columnspan=3,
+                        padx=5, pady=5)
+scrollW = 35
+scrollH = 5
+scroll = scrolledtext.ScrolledText(row_two_fill_colms, width=scrollW,
+                                   height=scrollH,
+                                   wrap=tk.WORD)
+scroll.grid(row=2, sticky='WE', column=0, columnspan=3)
 
 win.mainloop()
