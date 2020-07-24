@@ -61,8 +61,8 @@ def create_employee(conn, employee):
     :param employee:
     :return: employee id
     """
-    sql = ''' INSERT INTO employees(emp_id, EmployeeName, JobTitle, TotalPay)
-              VALUES(?,?,?,?) '''
+    sql = ''' INSERT INTO employees(EmployeeName, JobTitle, TotalPay)
+              VALUES(?,?,?) '''
     cur = conn.cursor()  # cursor object
     cur.execute(sql, employee)
     # returns the row id of the cursor object, the student id
@@ -159,8 +159,8 @@ if __name__ == '__main__':
     # create a new record
     conn = create_connection(db_file_name)
     with conn:
-        # emp_id, EmployeeName, JobTitle, TotalPay
-        employee = ('000-102', 'William Rouge', 'Editor', '30000.00')
+        # EmployeeName, JobTitle, TotalPay
+        employee = ('William Rouge', 'Editor', '30000.00')
         emp_editor = create_employee(conn, employee)
     
     # update pay
