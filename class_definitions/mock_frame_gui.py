@@ -5,11 +5,11 @@ Program: mock_frame_gui.py
 Used to mock up and test gui look, feel, and positioning
 """
 import tkinter as tk
+from tkinter import ttk
 from tkinter import N
 from tkinter import S
 from tkinter import W
 from tkinter import E
-from tkinter import ttk
 from tkinter import Menu
 from tkinter import scrolledtext
 
