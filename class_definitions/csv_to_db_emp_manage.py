@@ -76,9 +76,10 @@ def select_all_employees(conn):
     :return: all rows of employee table
     """
     cur = conn.cursor()
-    cur.execute('''SELECT oid, * FROM employees''')
+    sql = '''SELECT oid, * FROM employees'''
+    cur.execute(sql)
     rows = cur.fetchall()
-    # return the rows
+    # return all the rows
     return rows
 
 
@@ -142,7 +143,9 @@ def column_names(conn):
     equivalent to INFORMATION_SCHEMA.COLUMNS
     """
     cur = conn.cursor()
-    cur.execute('''SELECT name, sql FROM sqlite_master WHERE type='table' ORDER BY name;''')
+    cur.execute(
+        '''SELECT name, sql FROM sqlite_master WHERE type='table' ORDER BY 
+        name;''')
     rows = cur.fetchall()
     # return the rows
     return rows

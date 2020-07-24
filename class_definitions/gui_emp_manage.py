@@ -160,10 +160,6 @@ class DisplayEDMA:
         self.win.config(menu=menu_bar)
         # File Menu Bar items
         file_menu = Menu(menu_bar, tearoff=0)
-        # TODO: remove unused menu items
-        file_menu.add_command(label="New")
-        file_menu.add_command(label="Save Changes")
-        file_menu.add_separator()
         file_menu.add_command(label="Exit", command=_quit)
         menu_bar.add_cascade(label="File", menu=file_menu)
 
