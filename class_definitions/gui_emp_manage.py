@@ -49,19 +49,19 @@ class DisplayEDMA:
         # Nest Create Record Tab
         ctab_frame = ttk.LabelFrame(create_tab, text=" Add New Employee ")
         ctab_frame.grid(row=0, column=0, padx=5, pady=5)
-        ttk.Label(ctab_frame, text="Create a Record").grid(row=1, sticky="W", column=0)
+        ttk.Label(ctab_frame, text=" ").grid(row=1, sticky="W", column=0)
 
-        tk.Label(ctab_frame, text="Employee Name:  ").grid(row=3, sticky=W, padx=5, pady=2)
+        tk.Label(ctab_frame, text="Employee Name:  ").grid(row=2, sticky=W, padx=5, pady=2)
         ename = tk.Entry(ctab_frame, width=20)
-        ename.grid(row=3)
+        ename.grid(row=2)
 
-        tk.Label(ctab_frame, text="Job Title:  ").grid(row=4, sticky=W, padx=5, pady=2)
+        tk.Label(ctab_frame, text="Job Title:  ").grid(row=3, sticky=W, padx=5, pady=2)
         etitle = tk.Entry(ctab_frame, width=20)
-        etitle.grid(row=4)
+        etitle.grid(row=3)
 
-        tk.Label(ctab_frame, text="Total Pay:  ").grid(row=5, sticky=W, padx=5, pady=2)
+        tk.Label(ctab_frame, text="Total Pay:  ").grid(row=4, sticky=W, padx=5, pady=2)
         epay = tk.Entry(ctab_frame, width=20)
-        epay.grid(row=5)
+        epay.grid(row=4)
         self.new_emp_record_btn = tk.Button(ctab_frame, text='Add Employee', width=45)
 
         def clear_fields():
@@ -89,7 +89,7 @@ class DisplayEDMA:
         self.new_emp_record_btn['command'] = lambda: new_emp_record(ename,
                                                                     etitle,
                                                                     epay)
-        self.new_emp_record_btn.grid(row=6, sticky=W, padx=5, pady=5)
+        self.new_emp_record_btn.grid(row=5, sticky=W, padx=5, pady=5)
         """END CREATE RECORD TAB"""
 
         """Start Read Tab Content"""
@@ -97,10 +97,32 @@ class DisplayEDMA:
         read_tab = ttk.Frame(tab_control)  # create tab
         tab_control.add(read_tab, text="Read Record(s)")  # add the tab
         # Nest Read Record Tab
-        rtab_frame = ttk.LabelFrame(read_tab, text=" Read Functions ")
+        rtab_frame = ttk.LabelFrame(read_tab, text=" View Employees ")
         rtab_frame.grid(row=0, column=0, padx=5, pady=5)
-        ttk.Label(rtab_frame, text="Read a Record").grid(row=0, sticky="W",
-                                                         column=0)
+        ttk.Label(rtab_frame, text=" ").grid(row=1, sticky=tk.W, column=0)
+
+        def view_employees():
+            """
+            wrap the execution so it can be passed to the method
+            """
+            view_rows = ''
+            conn = empdb.create_connection(empdb.db_file_name)
+            with conn:
+                rows = empdb.select_all_employees(conn)
+                # loop thru rows
+                for row in rows:
+                    view_rows += '# ' + str(row[0]) \
+                                 + ', ' + str(row[1]) \
+                                 + ' ' + str(row[2]) \
+                                 + ' ' + str(row[3]) + '\n'
+                    # print(row)
+                view_label = ttk.Label(rtab_frame, text=view_rows)
+                view_label.grid(row=2, padx=5, pady=2)
+
+        view_employees_btn = tk.Button(rtab_frame, text='View Employees', width=45)
+        view_employees_btn['command'] = lambda: view_employees()
+        view_employees_btn.grid(row=3, sticky=W, padx=5)
+        """END READ RECORDS TAB"""
 
         """Update Tab Content"""
         # Update Record Tab
