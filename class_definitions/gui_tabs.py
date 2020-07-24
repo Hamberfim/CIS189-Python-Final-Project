@@ -14,6 +14,7 @@ win = tk.Tk()
 win.attributes("-topmost", True)
 win.title("EDMA")
 
+# tab control and creation
 tab_control = ttk.Notebook(win)  # control for tab
 create_tab = ttk.Frame(tab_control)  # create tab
 tab_control.add(create_tab, text="Create Record")  # add the tab
@@ -28,5 +29,22 @@ delete_tab = ttk.Frame(tab_control)  # create tab
 tab_control.add(delete_tab, text="Delete Record(s)")  # add the tab
 
 tab_control.pack(expand=1, fill="both")  # pack to make visible
+
+# nest tab control in LabelFrame(s)
+ctab_frame = ttk.LabelFrame(create_tab, text=" Create Functions ")
+ctab_frame.grid(row=0, column=0, padx=5, pady=5)
+ttk.Label(ctab_frame, text="Create a Record").grid(row=0, sticky="W", column=0)
+
+rtab_frame = ttk.LabelFrame(read_tab, text=" Read Functions ")
+rtab_frame.grid(row=0, column=0, padx=5, pady=5)
+ttk.Label(rtab_frame, text="Read a Record").grid(row=0, sticky="W", column=0)
+
+utab_frame = ttk.LabelFrame(update_tab, text=" Update Functions ")
+utab_frame.grid(row=0, column=0, padx=5, pady=5)
+ttk.Label(utab_frame, text="Update a Record").grid(row=0, sticky="W", column=0)
+
+dtab_frame = ttk.LabelFrame(delete_tab, text=" Delete Functions ")
+dtab_frame.grid(row=0, column=0, padx=5, pady=5)
+ttk.Label(dtab_frame, text="Delete a Record").grid(row=0, sticky="W", column=0)
 
 win.mainloop()
