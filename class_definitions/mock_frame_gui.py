@@ -10,6 +10,7 @@ from tkinter import S
 from tkinter import W
 from tkinter import E
 from tkinter import ttk
+from tkinter import Menu
 from tkinter import scrolledtext
 
 
@@ -35,7 +36,6 @@ frame_col_B = ttk.LabelFrame(win, text=' Column C')
 frame_col_B.grid(row=1, sticky=tk.W, column=2, padx=5, pady=5)
 ttk.Label(frame_col_B, text='Row=1 Col=2').grid(row=0, column=0)
 
-
 # scroll text control wrap by word not char
 row_two_fill_colms = ttk.LabelFrame(win, text='Message box')
 row_two_fill_colms.grid(row=2, sticky='WE', columnspan=3,
@@ -46,5 +46,32 @@ scroll = scrolledtext.ScrolledText(row_two_fill_colms, width=scrollW,
                                    height=scrollH,
                                    wrap=tk.WORD)
 scroll.grid(row=2, sticky='WE', column=0, columnspan=3)
+
+
+# menu bar actions
+def _quit():  # private function
+    """
+    Quit/Destroy Application GUI cleanly
+    """
+    win.quit()
+    win.destroy()
+    exit()
+
+
+# Top Menu bar
+menu_bar = Menu(win)
+win.config(menu=menu_bar)
+# File Menu Bar items
+file_menu = Menu(menu_bar, tearoff=0)
+file_menu.add_command(label="New")
+file_menu.add_command(label="Save Changes")
+file_menu.add_separator()
+file_menu.add_command(label="Exit", command=_quit)
+menu_bar.add_cascade(label="File", menu=file_menu)
+
+# help/about menu bar items
+about_menu = Menu(menu_bar, tearoff=0)
+about_menu.add_command(label="About")
+menu_bar.add_cascade(label="Help", menu=about_menu)
 
 win.mainloop()
