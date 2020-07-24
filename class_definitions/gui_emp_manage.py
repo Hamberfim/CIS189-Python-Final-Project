@@ -33,7 +33,10 @@ class DisplayEDMA:
 
     def tab_controls(self):
         """
-        Create tabs in a nested frame
+        START CONTROL TABS
+        Tab are created and the content is nested in a 'LabelFrame'
+
+        Create Tab Content
         """
         # Create Record tab control and creation
         tab_control = ttk.Notebook(self.win)  # control for tab
@@ -45,6 +48,7 @@ class DisplayEDMA:
         ctab_frame.grid(row=0, column=0, padx=5, pady=5)
         ttk.Label(ctab_frame, text="Create a Record").grid(row=0, sticky="W", column=0)
 
+        """Read Tab Content"""
         # Read Record Tab
         read_tab = ttk.Frame(tab_control)  # create tab
         tab_control.add(read_tab, text="Read Record(s)")  # add the tab
@@ -53,6 +57,7 @@ class DisplayEDMA:
         rtab_frame.grid(row=0, column=0, padx=5, pady=5)
         ttk.Label(rtab_frame, text="Read a Record").grid(row=0, sticky="W", column=0)
 
+        """Update Tab Content"""
         # Update Record Tab
         update_tab = ttk.Frame(tab_control)  # create tab
         tab_control.add(update_tab, text="Update Record(s)")  # add the tab
@@ -61,6 +66,7 @@ class DisplayEDMA:
         utab_frame.grid(row=0, column=0, padx=5, pady=5)
         ttk.Label(utab_frame, text="Update a Record").grid(row=0, sticky="W", column=0)
 
+        """Delete Tab Content"""
         # Delete Record Tab
         delete_tab = ttk.Frame(tab_control)  # create tab
         tab_control.add(delete_tab, text="Delete Record(s)")  # add the tab
