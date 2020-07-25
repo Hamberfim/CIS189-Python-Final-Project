@@ -8,9 +8,6 @@ This program provides the graphical user interface to manage
 the employee database file csv_to_db_emp_manage.py which imports
 a csv file and creates a SQLite3 database.
 """
-import sqlite3
-from msilib.schema import ListView
-from sqlite3 import Error
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
@@ -190,7 +187,7 @@ class DisplayEDMA:
         dtab_frame = ttk.LabelFrame(delete_tab, text=" Delete Employee ")
         dtab_frame.grid(row=0, column=0, padx=5, pady=5)
         ttk.Label(dtab_frame, text="Use Record id").grid(row=0, sticky="W",
-                                                           column=0)
+                                                         column=0)
 
         def view_delete_employees():
             """
