@@ -53,18 +53,22 @@ class DisplayEDMA:
         ctab_frame.grid(row=0, column=0, padx=5, pady=5)
         ttk.Label(ctab_frame, text=" ").grid(row=1, sticky="W", column=0)
 
-        tk.Label(ctab_frame, text="Employee Name:  ").grid(row=2, sticky=W, padx=5, pady=2)
+        tk.Label(ctab_frame, text="Employee Name:  ").grid(row=2, sticky=W,
+                                                           padx=5, pady=2)
         ename = tk.Entry(ctab_frame, width=20)
         ename.grid(row=2)
 
-        tk.Label(ctab_frame, text="Job Title:  ").grid(row=3, sticky=W, padx=5, pady=2)
+        tk.Label(ctab_frame, text="Job Title:  ").grid(row=3, sticky=W, padx=5,
+                                                       pady=2)
         etitle = tk.Entry(ctab_frame, width=20)
         etitle.grid(row=3)
 
-        tk.Label(ctab_frame, text="Total Pay:  ").grid(row=4, sticky=W, padx=5, pady=2)
+        tk.Label(ctab_frame, text="Total Pay:  ").grid(row=4, sticky=W, padx=5,
+                                                       pady=2)
         epay = tk.Entry(ctab_frame, width=20)
         epay.grid(row=4)
-        self.new_emp_record_btn = tk.Button(ctab_frame, text='Add Employee', width=45)
+        self.new_emp_record_btn = tk.Button(ctab_frame, text='Add Employee',
+                                            width=45)
 
         def clear_fields():
             """clear test fields after adding a person"""
@@ -101,7 +105,9 @@ class DisplayEDMA:
         # Nest Read Record Tab
         rtab_frame = ttk.LabelFrame(read_tab, text=" View Employees ")
         rtab_frame.grid(row=0, column=0, padx=5, pady=5)
-        ttk.Label(rtab_frame, text=" Mouse Scrolling ").grid(row=1, sticky='WE', column=0)
+        ttk.Label(rtab_frame, text=" Mouse Scrolling ").grid(row=1,
+                                                             sticky='WE',
+                                                             column=0)
 
         def view_employees():
             """
@@ -114,19 +120,22 @@ class DisplayEDMA:
                 rows = empdb.select_all_employees(conn)
                 # loop thru rows
                 for row in rows:
-                    listbox.insert(END, '# ' + str(row[0]) + ',  ' + str(row[1]) + ',  ' + str(row[2]) + ',  ' + str(row[3]) + '\n')
-                    # print(row)
+                    listbox.insert(END, '# ' + str(row[0]) + ',  '
+                                   + str(row[1]) + ',  '
+                                   + str(row[2]) + ',  '
+                                   + str(row[3]) + '\n')
+
                 view_label = ttk.Label(rtab_frame, text=view_rows)
                 view_label.grid(row=2, padx=5, pady=2)
 
                 scrollbar = Scrollbar(rtab_frame)
                 # scrollbar.grid(row=3)
-
                 listbox.grid(row=3, sticky='WE')
                 listbox.config(yscrollcommand=scrollbar.set)
                 scrollbar.config(command=listbox.yview)
 
-        view_employees_btn = tk.Button(rtab_frame, text='View Employees', width=45)
+        view_employees_btn = tk.Button(rtab_frame, text='View Employees',
+                                       width=45)
         view_employees_btn['command'] = lambda: view_employees()
         view_employees_btn.grid(row=4, sticky=W, padx=5)
         """END READ RECORDS TAB"""
