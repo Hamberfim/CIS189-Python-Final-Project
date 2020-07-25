@@ -16,6 +16,7 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import W, E, N, S
 from tkinter import Menu
+
 from class_definitions import csv_to_db_emp_manage as empdb
 
 
@@ -137,7 +138,7 @@ class DisplayEDMA:
         view_employees_btn = tk.Button(rtab_frame, text='View Employees',
                                        width=45)
         view_employees_btn['command'] = lambda: view_employees()
-        view_employees_btn.grid(row=4, sticky=W, padx=5)
+        view_employees_btn.grid(row=4, sticky='WE', padx=5)
         """END READ RECORDS TAB"""
 
         """Update Tab Content"""
@@ -145,20 +146,82 @@ class DisplayEDMA:
         update_tab = ttk.Frame(tab_control)  # create tab
         tab_control.add(update_tab, text="Update Record(s)")  # add the tab
         # Nest Update Record Tab
-        utab_frame = ttk.LabelFrame(update_tab, text=" Update Functions ")
+        utab_frame = ttk.LabelFrame(update_tab, text=" Update Employee ")
         utab_frame.grid(row=0, column=0, padx=5, pady=5)
-        ttk.Label(utab_frame, text="Update a Record").grid(row=0, sticky="W",
-                                                           column=0)
+        ttk.Label(utab_frame, text="Use Record id").grid(row=1, sticky="WE",
+                                                         column=0)
+
+        def view_update_employees():
+            """
+            wrap the execution so it can be passed to the method
+            """
+            listbox = Listbox(utab_frame, width=75)
+            view_rows = ''
+            conn = empdb.create_connection(empdb.db_file_name)
+            with conn:
+                rows = empdb.select_all_employees(conn)
+                # loop thru rows
+                for row in rows:
+                    listbox.insert(END, '# ' + str(row[0]) + ',  '
+                                   + str(row[1]) + ',  '
+                                   + str(row[2]) + ',  '
+                                   + str(row[3]) + '\n')
+
+                view_label = ttk.Label(utab_frame, text=view_rows)
+                view_label.grid(row=2, padx=5, pady=2)
+
+                scrollbar = Scrollbar(utab_frame)
+                # scrollbar.grid(row=3)
+                listbox.grid(row=3, sticky='WE')
+                listbox.config(yscrollcommand=scrollbar.set)
+                scrollbar.config(command=listbox.yview)
+
+        view_employees_btn = tk.Button(utab_frame, text='View Employees',
+                                       width=45)
+        view_employees_btn['command'] = lambda: view_update_employees()
+        view_employees_btn.grid(row=4, sticky='WE', padx=5)
+        """END UPDATE RECORD TAB"""
 
         """Delete Tab Content"""
         # Delete Record Tab
         delete_tab = ttk.Frame(tab_control)  # create tab
         tab_control.add(delete_tab, text="Delete Record(s)")  # add the tab
         # Nest Delete Record Tab
-        dtab_frame = ttk.LabelFrame(delete_tab, text=" Delete Functions ")
+        dtab_frame = ttk.LabelFrame(delete_tab, text=" Delete Employee ")
         dtab_frame.grid(row=0, column=0, padx=5, pady=5)
-        ttk.Label(dtab_frame, text="Delete a Record").grid(row=0, sticky="W",
+        ttk.Label(dtab_frame, text="Use Record id").grid(row=0, sticky="W",
                                                            column=0)
+
+        def view_delete_employees():
+            """
+            wrap the execution so it can be passed to the method
+            """
+            listbox = Listbox(dtab_frame, width=75)
+            view_rows = ''
+            conn = empdb.create_connection(empdb.db_file_name)
+            with conn:
+                rows = empdb.select_all_employees(conn)
+                # loop thru rows
+                for row in rows:
+                    listbox.insert(END, '# ' + str(row[0]) + ',  '
+                                   + str(row[1]) + ',  '
+                                   + str(row[2]) + ',  '
+                                   + str(row[3]) + '\n')
+
+                view_label = ttk.Label(dtab_frame, text=view_rows)
+                view_label.grid(row=2, padx=5, pady=2)
+
+                scrollbar = Scrollbar(dtab_frame)
+                # scrollbar.grid(row=3)
+                listbox.grid(row=3, sticky='WE')
+                listbox.config(yscrollcommand=scrollbar.set)
+                scrollbar.config(command=listbox.yview)
+
+        view_employees_btn = tk.Button(dtab_frame, text='View Employees',
+                                       width=45)
+        view_employees_btn['command'] = lambda: view_delete_employees()
+        view_employees_btn.grid(row=4, sticky='WE', padx=5)
+        """END DELETE RECORD TAB"""
 
         tab_control.grid()  # make tabs visible
 
