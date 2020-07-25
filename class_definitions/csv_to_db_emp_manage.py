@@ -77,7 +77,22 @@ def select_all_employees(conn):
     """
     cur = conn.cursor()
     sql = '''SELECT oid, * FROM employees'''
+    # sql = '''SELECT oid, * FROM employees ORDER BY oid LIMIT 0,10'''
     cur.execute(sql)
+    rows = cur.fetchall()
+    # return all the rows
+    return rows
+
+
+def select_next_employees(conn):
+    """Query all rows of employee table
+    :param conn: the connection object
+    :return: all rows of employee table
+    """
+    cur = conn.cursor()
+    # sql = '''SELECT oid, * FROM employees'''
+    sql2 = '''SELECT oid, * FROM employees ORDER BY oid LIMIT 10,10'''
+    cur.execute(sql2)
     rows = cur.fetchall()
     # return all the rows
     return rows

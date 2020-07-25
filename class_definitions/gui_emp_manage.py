@@ -9,8 +9,10 @@ the employee database file csv_to_db_emp_manage.py which imports
 a csv file and creates a SQLite3 database.
 """
 import sqlite3
+from msilib.schema import ListView
 from sqlite3 import Error
 import tkinter as tk
+from tkinter import *
 from tkinter import ttk
 from tkinter import W, E, N, S
 from tkinter import Menu
@@ -105,10 +107,35 @@ class DisplayEDMA:
             """
             wrap the execution so it can be passed to the method
             """
+            listbox = Listbox(rtab_frame)
             view_rows = ''
             conn = empdb.create_connection(empdb.db_file_name)
             with conn:
                 rows = empdb.select_all_employees(conn)
+                # loop thru rows
+                for row in rows:
+                    listbox.insert(END, '# ' + str(row[0]) + ', ' + str(row[1]) + ' ' + str(row[2]) + ' ' + str(row[3]) + '\n')
+                    # print(row)
+                view_label = ttk.Label(rtab_frame, text=view_rows)
+                view_label.grid(row=2, padx=5, pady=2)
+
+                scrollbar = Scrollbar(rtab_frame)
+                scrollbar.grid(row=4)
+
+                listbox.grid(row=3)
+                listbox.config(yscrollcommand=scrollbar.set)
+                scrollbar.config(command=listbox.yview)
+
+        view_employees_btn = tk.Button(rtab_frame, text='View Employees', width=25)
+        view_employees_btn['command'] = lambda: view_employees()
+        view_employees_btn.grid(row=4, sticky=W, padx=5)
+
+        """def view_next():
+            view_rows = ''
+            conn = empdb.create_connection(empdb.db_file_name)
+            with conn:
+                rows = empdb.select_next_employees(conn)
+                count = len(rows)
                 # loop thru rows
                 for row in rows:
                     view_rows += '# ' + str(row[0]) \
@@ -119,9 +146,9 @@ class DisplayEDMA:
                 view_label = ttk.Label(rtab_frame, text=view_rows)
                 view_label.grid(row=2, padx=5, pady=2)
 
-        view_employees_btn = tk.Button(rtab_frame, text='View Employees', width=45)
-        view_employees_btn['command'] = lambda: view_employees()
-        view_employees_btn.grid(row=3, sticky=W, padx=5)
+        view_next_btn = tk.Button(rtab_frame, text='View Next 10', width=25)
+        view_next_btn['command'] = lambda: view_next()
+        view_next_btn.grid(row=4, sticky=W, padx=5)"""
         """END READ RECORDS TAB"""
 
         """Update Tab Content"""
