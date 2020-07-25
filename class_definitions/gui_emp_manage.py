@@ -101,7 +101,7 @@ class DisplayEDMA:
         # Nest Read Record Tab
         rtab_frame = ttk.LabelFrame(read_tab, text=" View Employees ")
         rtab_frame.grid(row=0, column=0, padx=5, pady=5)
-        ttk.Label(rtab_frame, text=" ").grid(row=1, sticky='WE', column=0)
+        ttk.Label(rtab_frame, text=" Mouse Scrolling ").grid(row=1, sticky='WE', column=0)
 
         def view_employees():
             """
