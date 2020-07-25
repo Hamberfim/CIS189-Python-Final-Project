@@ -87,7 +87,7 @@ def select_all_employees(conn):
 def select_next_employees(conn):
     """Query all rows of employee table
     :param conn: the connection object
-    :return: all rows of employee table
+    :return: 10 rows offset by 10 of employee table
     """
     cur = conn.cursor()
     # sql = '''SELECT oid, * FROM employees'''
