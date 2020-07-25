@@ -218,6 +218,26 @@ class DisplayEDMA:
                                        width=45)
         view_employees_btn['command'] = lambda: view_delete_employees()
         view_employees_btn.grid(row=4, sticky='WE', padx=5)
+
+        def delete_record():
+            """
+            wrap the execution so it can be passed to the method
+            """
+            emp_id = delete_field.get()
+            conn = empdb.create_connection(empdb.db_file_name)
+            with conn:
+                del_emp = int(emp_id)
+                deleting = empdb.delete_employee(conn, del_emp)
+                view_delete_employees()
+
+        delete_label = Label(dtab_frame, text='Enter Record id to Delete: ')
+        delete_label.grid(row=5, sticky='W', padx=5, pady=5)
+        delete_field = Entry(dtab_frame, width=15)
+        delete_field.grid(row=6, sticky='W', padx=5, pady=5)
+        delete_emp_btn = tk.Button(dtab_frame, text='Delete Record',
+                                   width=15)
+        delete_emp_btn['command'] = lambda: delete_record()
+        delete_emp_btn.grid(row=6, sticky='E', padx=5, pady=5)
         """END DELETE RECORD TAB"""
 
         tab_control.grid()  # make tabs visible
