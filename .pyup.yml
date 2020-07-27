@@ -15,12 +15,12 @@ branch: dev
 # update schedule
 # default: empty
 # allowed: "every day", "every week", ..
-schedule: "every day"
+schedule:
 
 # search for requirement files
 # default: True
 # allowed: True, False
-search: True
+search: False
 
 # Specify requirement files by hand, default is empty
 # default: empty
@@ -47,7 +47,7 @@ label_prs: update
 # requires private repo permissions, even on public repos
 # default: empty
 assignees:
-
+  - adhamlin
 
 # configure the branch prefix the bot is using
 # default: pyup-
