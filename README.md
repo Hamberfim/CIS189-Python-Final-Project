@@ -5,9 +5,10 @@
 <br/> ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... <br/><br/>
 I also used **csv_to_sqlite.py* which is a script that takes CSV file(s) as input and copies their contents into a SQLite database. The Column names are taken from the headers (first row) in the csv file. <br/>
 
-**Source*:
-csv_to_sqlite.py 
-Copyright (c) 2016 Ladislav Benc
+**Source for csv_to_sqlite.py*:
+csv_to_sqlite.py ownership and copyright belong to Ladislav Benc
+csv_to_sqlite Copyright (c) 2016 Ladislav Benc.
+For more information on csv_to_sqlite:
 https://pypi.org/project/csv-to-sqlite/
 - https://github.com/zblesk/csv-to-sqlite
 - https://github.com/zblesk/csv-to-sqlite/blob/master/LICENSE.txt MIT License (MIT)
