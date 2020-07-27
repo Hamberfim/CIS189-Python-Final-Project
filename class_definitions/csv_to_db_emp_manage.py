@@ -16,8 +16,6 @@ and then the database is managed through a tkinter GUI.
         else:
             * make db connection
             * provide CRUD functionality
-TODO:
-    Build GUI on top with CRUD functionality
 """
 import os
 # import csv
@@ -181,7 +179,7 @@ def column_names(conn):
 
 
 if __name__ == '__main__':
-    # TODO: remove after testing
+    # DRIVER CODE FOR testing
     """
     # get all records
     results = select_all_employees(sqlite3.connect(db_file_name))
