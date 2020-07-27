@@ -189,7 +189,8 @@ class DisplayEDMA:
             conn = empdb.create_connection(empdb.db_file_name)
             with conn:
                 # EmployeeName, JobTitle, TotalPay, oid
-                update_emp = (str(employee_name), str(job_title), str(total_pay), int(emp_id))
+                update_emp = (str(employee_name), str(job_title),
+                              str(total_pay), int(emp_id))
                 updating = empdb.update_employee(conn, update_emp)
                 view_update_employees()
 
