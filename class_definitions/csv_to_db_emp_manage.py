@@ -18,7 +18,6 @@ and then the database is managed through a tkinter GUI.
             * provide CRUD functionality
 """
 import os
-# import csv
 import sqlite3
 from sqlite3 import Error
 from class_definitions import csv_to_sqlite
