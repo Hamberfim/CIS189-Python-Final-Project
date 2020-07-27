@@ -25,7 +25,7 @@ class DisplayEDMA:
     def __init__(self):
         self.win = tk.Tk()
         # set the initial window size (width, height)
-        # win.minsize(300, 250)
+        self.win.minsize(600, 470)
         self.win.attributes("-topmost", True)
         self.win.title("EDMA")
         app_label = ttk.Label(self.win, text="Employee Data Management",
