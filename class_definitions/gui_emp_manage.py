@@ -99,8 +99,8 @@ class DisplayEDMA:
         """Start Read Tab Content"""
         # Read Record Tab
         read_tab = ttk.Frame(tab_control)  # create tab
-        tab_control.add(read_tab, text="Read Record(s)")  # add the tab
         # Nest Read Record Tab
+        tab_control.add(read_tab, text="Read Record(s)")  # add the tab
         rtab_frame = ttk.LabelFrame(read_tab, text=" View Employees ")
         rtab_frame.grid(row=0, column=0, padx=5, pady=5)
         ttk.Label(rtab_frame, text=" Mouse Scrolling ").grid(row=1,
@@ -128,14 +128,14 @@ class DisplayEDMA:
 
                 scrollbar = Scrollbar(rtab_frame)
                 # scrollbar.grid(row=3)
-                listbox.grid(row=3, sticky='WE')
+                listbox.grid(row=4, sticky='WE')
                 listbox.config(yscrollcommand=scrollbar.set)
                 scrollbar.config(command=listbox.yview)
 
         view_employees_btn = tk.Button(rtab_frame, text='View Employees',
                                        width=45)
         view_employees_btn['command'] = lambda: view_employees()
-        view_employees_btn.grid(row=4, sticky='WE', padx=5)
+        view_employees_btn.grid(row=3, sticky='WE', padx=5)
         """END READ RECORDS TAB"""
 
         """Update Tab Content"""
@@ -169,14 +169,14 @@ class DisplayEDMA:
 
                 scrollbar = Scrollbar(utab_frame)
                 # scrollbar.grid(row=3)
-                listbox.grid(row=3, sticky='WE')
+                listbox.grid(row=4, sticky='WE')
                 listbox.config(yscrollcommand=scrollbar.set)
                 scrollbar.config(command=listbox.yview)
 
         view_employees_btn = tk.Button(utab_frame, text='View Employees',
                                        width=45)
         view_employees_btn['command'] = lambda: view_update_employees()
-        view_employees_btn.grid(row=4, sticky='WE', padx=5)
+        view_employees_btn.grid(row=3, sticky='WE', padx=5)
         """END UPDATE RECORD TAB"""
 
         """Delete Tab Content"""
@@ -210,14 +210,14 @@ class DisplayEDMA:
 
                 scrollbar = Scrollbar(dtab_frame)
                 # scrollbar.grid(row=3)
-                listbox.grid(row=3, sticky='WE')
+                listbox.grid(row=4, sticky='WE')
                 listbox.config(yscrollcommand=scrollbar.set)
                 scrollbar.config(command=listbox.yview)
 
         view_employees_btn = tk.Button(dtab_frame, text='View Employees',
                                        width=45)
         view_employees_btn['command'] = lambda: view_delete_employees()
-        view_employees_btn.grid(row=4, sticky='WE', padx=5)
+        view_employees_btn.grid(row=3, sticky='WE', padx=5)
 
         def delete_record():
             """
