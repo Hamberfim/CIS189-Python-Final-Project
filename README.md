@@ -1,7 +1,7 @@
 ## Employee Database Management Application (EDMA) 
 ### 🌱 a simple database management app with GUI <br/>
-#### ⚡ Python I - CIS189 Final Project ⚡<br/>  
-Proposal: 💬 Utilizing the Python language along with SQLite3 and Tkinter, part of the standard Python library, build out the functionality and graphical user interface of an Employee Database Management Application.
+#### ⚡ Python I - CIS189 Final Project <br/>  
+💬 Proposal: Utilizing the Python language along with SQLite3 and Tkinter, part of the standard Python library, build out the functionality and graphical user interface of an Employee Database Management Application.
 
 I also used **csv_to_sqlite.py* which is a script that takes CSV file(s) as input and copies their contents into a SQLite database. The Column names are taken from the headers (first row) in the csv file.
 
