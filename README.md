@@ -11,7 +11,7 @@ csv_to_sqlite Copyright (c) 2016 Ladislav Benc. <br/>
 For more information on csv_to_sqlite:
 - https://pypi.org/project/csv-to-sqlite/
 - https://github.com/zblesk/csv-to-sqlite
-- https://github.com/zblesk/csv-to-sqlite/blob/master/LICENSE.txt MIT License (MIT)
+- https://github.com/zblesk/csv-to-sqlite/blob/master/LICENSE.txt  -- MIT License (MIT)
 - https://zblesk.net/blog
 - https://zblesk.net/blog/csv-to-sqlite-2-1/
 <br/>
