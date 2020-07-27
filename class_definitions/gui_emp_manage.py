@@ -177,6 +177,48 @@ class DisplayEDMA:
                                        width=45)
         view_employees_btn['command'] = lambda: view_update_employees()
         view_employees_btn.grid(row=3, sticky='WE', padx=5)
+
+        def update_record():
+            """
+            wrap the execution so it can be passed to the method
+            """
+            employee_name = up_ename.get()
+            job_title = up_etitle.get()
+            total_pay = up_epay.get()
+            emp_id = id_field.get()
+            conn = empdb.create_connection(empdb.db_file_name)
+            with conn:
+                # EmployeeName, JobTitle, TotalPay, oid
+                update_emp = (str(employee_name), str(job_title), str(total_pay), int(emp_id))
+                updating = empdb.update_employee(conn, update_emp)
+                view_update_employees()
+
+            # call to clear fields for new entry
+            clear_fields()
+
+        tk.Label(utab_frame, text="Employee Name:  ").grid(row=5, sticky=W,
+                                                           padx=5, pady=2)
+        up_ename = tk.Entry(utab_frame, width=20)
+        up_ename.grid(row=5)
+
+        tk.Label(utab_frame, text="Job Title:  ").grid(row=6, sticky=W, padx=5,
+                                                       pady=2)
+        up_etitle = tk.Entry(utab_frame, width=20)
+        up_etitle.grid(row=6)
+
+        tk.Label(utab_frame, text="Total Pay:  ").grid(row=7, sticky=W, padx=5,
+                                                       pady=2)
+        up_epay = tk.Entry(utab_frame, width=20)
+        up_epay.grid(row=7)
+
+        update_label = Label(utab_frame, text='Record id: ')
+        update_label.grid(row=8, sticky='W', padx=5, pady=5)
+        id_field = Entry(utab_frame, width=15)
+        id_field.grid(row=8, padx=5, pady=5)
+        update_emp_btn = tk.Button(utab_frame, text='Update Record',
+                                   width=15)
+        update_emp_btn['command'] = lambda: update_record()
+        update_emp_btn.grid(row=8, sticky='E', padx=5, pady=5)
         """END UPDATE RECORD TAB"""
 
         """Delete Tab Content"""
@@ -230,8 +272,7 @@ class DisplayEDMA:
                 deleting = empdb.delete_employee(conn, del_emp)
                 view_delete_employees()
 
-        delete_label = Label(dtab_frame, text='Enter Record id to Delete: ')
-        delete_label.grid(row=5, sticky='W', padx=5, pady=5)
+
         delete_field = Entry(dtab_frame, width=15)
         delete_field.grid(row=6, sticky='W', padx=5, pady=5)
         delete_emp_btn = tk.Button(dtab_frame, text='Delete Record',
@@ -261,8 +302,9 @@ class DisplayEDMA:
 
         # help/about menu bar items
         about_menu = Menu(menu_bar, tearoff=0)
-        about_menu.add_command(label="About")
-        menu_bar.add_cascade(label="Help", menu=about_menu)
+        about_menu.add_command(label="Employee Data Management Application, "
+                                     "Ⓒ 2020 Hamberfim Industries")
+        menu_bar.add_cascade(label="About", menu=about_menu)
 
         self.win.mainloop()
 

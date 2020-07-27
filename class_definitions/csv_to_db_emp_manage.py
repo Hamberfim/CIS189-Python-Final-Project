@@ -98,6 +98,20 @@ def select_next_employees(conn):
     return rows
 
 
+def update_employee(conn, employee):
+    """Update Employee name
+    :param conn:
+    :param employee:
+    :return: employee id
+    """
+    sql = ''' UPDATE employees
+              SET EmployeeName = ?,  JobTitle = ?, TotalPay = ? 
+              WHERE oid = ?'''
+    cur = conn.cursor()
+    cur.execute(sql, employee)
+    conn.commit()
+
+
 def update_employee_name(conn, employee):
     """Update Employee name
     :param conn:
