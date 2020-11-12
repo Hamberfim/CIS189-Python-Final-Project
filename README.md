@@ -1,5 +1,3 @@
-[![Known Vulnerabilities](https://snyk.io/test/github/Hamberfim/EDMA/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/Hamberfim/EDMA?targetFile=requirements.txt)
-
 ## Employee Database Management Application (EDMA) 
 ### 🌱 a simple database management app with GUI <br/>
 #### ⚡ Python I - CIS189 Final Project <br/>  
