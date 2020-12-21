@@ -1,6 +1,7 @@
-## Employee Database Management Application (EDMA) 
-### 🌱 a simple database management app with GUI - CRUD <br/>
-#### ⚡ Python I - CIS189 Final Project <br/>  
+### ⚡ Python I - CIS189 Final Project <br/> 
+#### Employee Database Management Application (EDMA) 
+#### 🌱 a simple database management app with GUI - CRUD <br/>
+ 
 💬 Proposal: Utilizing the Python language along with SQLite3 and Tkinter, part of the standard Python library, build out the functionality and graphical user interface of an Employee Database Management Application. <br/>
 
 ![Alt](https://github.com/Hamberfim/EDMA/blob/master/01_screen.png "Create Record")
