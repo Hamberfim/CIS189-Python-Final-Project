@@ -11,7 +11,7 @@
 ![Alt](https://github.com/Hamberfim/EDMA/blob/master/03_screen.png "Update Record")
 
 <br/><br/> ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... <br/><br/>
-I also used *csv_to_sqlite.py which is a script that takes CSV file(s) as input and copies their contents into a SQLite database. The Column names are taken from the headers (first row) in the csv file. <br/>
+I also used *csv_to_sqlite.py which is a script that takes CSV file(s) as input and copies the contents into a SQLite database. The Column names are taken from the headers (first row) in the csv file. <br/>
 
 **Source for csv_to_sqlite.py*:
 csv_to_sqlite.py ownership and copyright belong to Ladislav Benc
